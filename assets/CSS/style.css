@@ -1,0 +1,25 @@
+.prev, .next {
+    background: linear-gradient(90deg, #ef3e0f, #ffb800);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 40px;
+    height: 40px;
+    z-index: 5; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.prev {
+    left: 1%;
+}
+
+.next {
+    right: 1%; 
+}
+.text-hover:hover {
+color: red !important;
+}
