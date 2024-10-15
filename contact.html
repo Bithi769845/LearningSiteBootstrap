@@ -8,17 +8,17 @@
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+  <body >
 
     <!-- Navbar with modal trigger -->
-    <nav class="navbar sticky-top  navbar-expand-lg bg-body-light">
+    <nav class="navbar sticky-top navbar-expand-lg bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="assets\images\logo.png" width="135px" height="40px"></a>
+        <a class="navbar-brand" href="index.html"><img src="assets\images\logo.png" width="135px" height="40px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse  navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,12 +64,12 @@
               </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
           
           <!-- Login Modal Trigger Button -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+          <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-color: #ffb800;">Login</button>
         </div>
       </div>
     </nav>
@@ -82,34 +82,35 @@
             <form class="needs-validation" novalidate>
               <!-- Email Field -->
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="col-form-label" required>Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" required>
+                <label for="exampleFormControlInput1" class="col-form-label" required><strong>Email</strong></label>
+                <input type="email" class="form-control rounded-0" id="exampleFormControlInput1" value="learning@gmail.com" required>
                 <div id="validationServerEmailFeedback" class="invalid-feedback">
                   Please include an '@' in the email address.
                 </div>
               </div>
               <!-- Password Field -->
               <div class="mb-3">
-                <label for="inputPassword5" class="col-form-label" required>Password</label>
-                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" required>
+                <label for="inputPassword5" class="col-form-label" required><strong>Password</strong></label>
+                <input type="password" id="inputPassword5" class="form-control rounded-0" aria-describedby="passwordHelpBlock" required>
                 <div class="invalid-feedback">Please enter a valid password.</div>
               </div>
               <!-- Remember Password Checkbox -->
               <div class="mb-3">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                  <label class="form-check-label" for="flexCheckChecked">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
                     Remember Password
                   </label>
                 </div>
+               
               </div>
               <!-- Submit Button -->
               <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-md ps-3 pe-3 rounded-5" style="background: linear-gradient(90deg, #ef3e0f, #ffb800);">Login</button>
               </div>
               <!-- Signup Link -->
-              <div class="mb-3">
-                <h6>Don’t have an account? <a href="#">Signup Now</a></h6>
+              <div class="mb-3 ">
+                <h6 >Don’t have an account? <a href="#" class="text-decoration-none text-danger">Signup Now</a></h6>
               </div>
             </form>
           </div>
@@ -129,9 +130,9 @@
           <div class="card-img-overlay d-flex flex-column justify-content-center bg-dark bg-opacity-50 h-100">
             <div class="text-center">
               <h1 class="card-title">Contact</h1>
-              <p class="card-text">
-                <a href="index.html" class="text-light">Home</a> / 
-                <a href="contact.html" class="text-light"><strong>Contact</strong></a>
+              <p class="card-text ">
+                <a href="index.html" class=" text-decoration-none disabled" style="color: rgba(255, 255, 255, .5) !important;">Home</a> / 
+                <a href="contact.html" class="text-light text-decoration-none"><strong>Contact</strong></a>
               </p>
             </div>
           </div>
@@ -142,46 +143,48 @@
 
 
 <div class="mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <div class="row ">
+  <p class="text-uppercase text-danger text-center">Contact Us</p>
+  <h1 class="text-center" style="color: #0c2e60;">If You Have Any Query,Drop<br> a Message</h1>
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center gap-5">
+            <div class="col-7">
+                <form class="row ">
                     <div class="col-6  mb-3">
-                      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                      <input type="text" class="form-control rounded-0" placeholder="First name" aria-label="First name">
                     </div>
                     <div class="col-6 mb-3">
-                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                      <input type="text" class="form-control rounded-0" placeholder="Last name" aria-label="Last name">
                     </div>
                     <div class="col-6 mb-3">
-                        <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                        <input type="email" class="form-control rounded-0" placeholder="Your Email" aria-label="Your Email">
                       </div>
                       <div class="col-6 mb-3">
-                        <input type="tel" class="form-control" placeholder="Your Phone" aria-label="Your Phone">
+                        <input type="tel" class="form-control rounded-0" placeholder="Your Phone" aria-label="Your Phone">
                       </div>
                       <div class="col-12 mb-3">
-                        <textarea class="form-control" placeholder="Your Message" rows="8"></textarea>
+                        <textarea class="form-control rounded-0"  placeholder="Your Message" rows="8"></textarea>
                       </div>
                       <div class="col-12 d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+                        <button type="submit" class="btn rounded-5 p-3 " style="background: linear-gradient(90deg, #ef3e0f, #ffb800);">SEND MESSAGE</button>
                       </div>
-                  </div>
+                  </form>
             </div>
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
+            <div class="col-4 ">
+                <div class="card " >
+                    <div class="card-body ">
                       <h5 class="card-title">Contact Info</h5>
-                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing 
+                      <p class="card-text ">Lorem Ipsum is simply dummy text of the printing 
                         and typesetting industry. Lorem Ipsum has been the industry's standard 
                         dummy text ever since the 1500s, when an unknown printer took a galley 
                         of type and scrambled.Lorem Ipsum is simply dummy text.</p>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Location Info</h6>
+                      <h6 class="card-subtitle mb-2 text-body-secondary fw-bold">Location Info</h6>
                       <p class="card-text">Baganbari PanirTank, Tangail Sadar-(1900), Dhaka, Bangladesh</p>
                       
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Hotline Numbers</h6>
+                      <h6 class="card-subtitle mb-2 text-body-secondary fw-bold">Hotline Numbers</h6>
                       <p class="card-text">+8801968618766 <br> +8801990127192</p>
 
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Email us</h6>
-                      <p class="card-text">Myth019@gmail.com</p>
+                      <h6 class="card-subtitle mb-2 text-body-secondary fw-bold">Email us</h6>
+                      <p class="card-text ">Myth019@gmail.com</p>
                     </div>
                   </div>
             </div>
@@ -191,7 +194,11 @@
 
 
 
-<div class="container-fluid bg-light p-5 mt-5">
+
+
+
+
+<div class="container-fluid bg-light p-5 mt-5" style="width: 100%; height: 100%;">
     <div class="container mt-5">
         <div class="row">
             <div class="col-3">
@@ -235,8 +242,8 @@
 </div>
 
 <!-- Footer Copyright Section -->
-<footer class="text-center mt-3" style="background-color: #FFFFFF; color: #4b4b4b;">
-    <h6 class="small">Learning BD © 2024 Designed by MS Bithi. All Rights Reserved</h6>
+<footer class="text-center mt-3 " style="background-color: #FFFFFF; color: #4b4b4b;">
+    <h5 class="small">Learning BD © 2024 Designed by MS Bithi. All Rights Reserved</h6>
 </footer>
 
 
