@@ -17,16 +17,78 @@
 
 <body>
 
-  <!-- Navbar with modal trigger -->
+   <!-- Navbar with modal trigger and offcanvas for mobile/tablet screens -->
   <nav class="navbar sticky-top navbar-expand-lg bg-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="assets\images\logo.png" width="135px" height="40px"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" width="135px" height="40px"></a>
+
+      <!-- Offcanvas Toggler for mobile/tablet screens -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Offcanvas menu for mobile/tablet screens -->
+      <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <!-- Same menu items from the original navbar -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu rounded-0">
+                <li><a class="dropdown-item" href="#">Home 1</a></li>
+                <li><a class="dropdown-item" href="#">Home 2</a></li>
+                <li><a class="dropdown-item" href="#">Home 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Courses
+              </a>
+              <ul class="dropdown-menu rounded-0">
+                <li><a class="dropdown-item" href="#">Courses</a></li>
+                <li><a class="dropdown-item" href="#">Courses Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Blog
+              </a>
+              <ul class="dropdown-menu rounded-0">
+                <li><a class="dropdown-item" href="#">Blogs</a></li>
+                <li><a class="dropdown-item" href="#">Blog Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Page
+              </a>
+              <ul class="dropdown-menu rounded-0">
+                <li><a class="dropdown-item" href="#">Pages</a></li>
+                <li><a class="dropdown-item" href="#">Page Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Login Modal Trigger Button -->
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-color: #ffb800;">Login</button>
+        </div>
+      </div>
+
+      <!-- Normal Navbar for large screens -->
+      <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +112,6 @@
               <li><a class="dropdown-item" href="#">Courses Details</a></li>
             </ul>
           </li>
-
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Blog
@@ -60,17 +121,15 @@
               <li><a class="dropdown-item" href="#">Blog Details</a></li>
             </ul>
           </li>
-
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Page
             </a>
             <ul class="dropdown-menu rounded-0">
-              <li><a class="dropdown-item" href="#">Pages </a></li>
+              <li><a class="dropdown-item" href="#">Pages</a></li>
               <li><a class="dropdown-item" href="#">Page Details</a></li>
             </ul>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
@@ -80,9 +139,9 @@
         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal"
           style="border-color: #ffb800;">Login</button>
       </div>
+      </div>
     </div>
   </nav>
-
   <!-- Login Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -133,9 +192,7 @@
       </div>
     </div>
   </div>
-
-
-
+<!-- Hero Section -->
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active position-relative">
@@ -152,26 +209,50 @@
                   <p class="text-uppercase" style="font-size: calc(1.475rem + 2.7vw);">smart is great</p>
                 </h1>
                 <div class="container mt-5">
-                  <form class="d-flex" role="search">
-                    <div class="input-group">
-                      <button class="btn btn-lg ps-5 dropdown-toggle rounded-start-5" type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false"
-                        style="background-color: #fff; color: #000; border-radius: 0; border: none; outline: none; box-shadow: none;">
-                        Options
-                      </button>
-                      <ul class="dropdown-menu rounded-0">
-                        <li><a class="dropdown-item" href="#">Option 1</a></li>
-                        <li><a class="dropdown-item" href="#">Option 2</a></li>
-                        <li><a class="dropdown-item" href="#">Option 3</a></li>
-                      </ul>
-                      <input class="form-control me-0" type="search" placeholder="Search" aria-label="Search"
-                        style="border-radius: 0; border: none;">
-                      <button class="btn btn-lg ps-5 pe-5 pt-3 pb-3 rounded-end-5" type="submit"
-                        style="border-radius: 0; color: #ffff; background: linear-gradient(90deg, #ef3e0f, #ffb800); border: none;">
-                        <i class="fas fa-search"></i>
-                      </button>
+                  <form action="" method="post">
+                    <!-- === Medium and Larger Screens (md and up) === -->
+                    <div class="d-md-block d-none">
+                       <div class="input-group">
+                          <!-- === Categories Dropdown === -->
+                          <button class="btn dropdown-toggle bg-white rounded-start-pill border-0 fs-6 text-dark p-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             All Categories
+                          </button>
+                          <ul class="dropdown-menu">
+                             <li><a class="dropdown-item" href="#">All Categories</a></li>
+                             <li><a class="dropdown-item" href="#">IT & Software</a></li>
+                             <li><a class="dropdown-item" href="#">Development</a></li>
+                             <li><a class="dropdown-item" href="#">Marketing & SEO</a></li>
+                          </ul>
+                          <input type="text" class="form-control box-shadow-none border-0 fs-6 text-muted" placeholder="Enter a Subject">
+                          <!-- === Submit Button with Icon and Design === -->
+                          <button class="btn btn-lg ps-5 pe-5 pt-3 pb-3 rounded-end-5" type="submit" style="border-radius: 0; color: #fff; background: linear-gradient(90deg, #ef3e0f, #ffb800); border: none;">
+                             <i class="fas fa-search"></i>
+                          </button>
+                       </div>
                     </div>
-                  </form>
+                 
+                    <!-- === Small Screens (sm and below) === -->
+                    <div class="d-block d-md-none">
+                       <!-- === Categories Dropdown === -->
+                       <button class="btn dropdown-toggle bg-white rounded-pill border-0 fs-6 text-dark p-sm-3 p-2 w-100 d-flex justify-content-between align-items-center mb-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          All Categories
+                       </button>
+                       <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">All Categories</a></li>
+                          <li><a class="dropdown-item" href="#">IT & Software</a></li>
+                          <li><a class="dropdown-item" href="#">Development</a></li>
+                          <li><a class="dropdown-item" href="#">Marketing & SEO</a></li>
+                       </ul>
+                    </div>
+                    <div class="d-block d-md-none">
+                       <input type="text" class="form-control box-shadow-none border-0 fs-6 text-muted p-sm-3 p-2 rounded-pill mb-3" placeholder="Enter a Subject"> 
+                    </div>
+                    <div class="d-block d-md-none">
+                       <button class="btn btn-lg ps-5 pe-5 pt-3 pb-3 rounded-5 w-100" type="submit" style="border-radius: 0; color: #fff; background: linear-gradient(90deg, #ef3e0f, #ffb800); border: none;">
+                          <i class="fas fa-search"></i>
+                       </button>
+                    </div>
+                 </form>                                  
                 </div>
               </div>
             </div>
@@ -193,26 +274,50 @@
                   <p class="text-uppercase" style="font-size: calc(1.475rem + 2.7vw);">smart is great</p>
                 </h1>
                 <div class="container mt-5">
-                  <form class="d-flex" role="search">
-                    <div class="input-group">
-                      <button class="btn btn-lg ps-5 dropdown-toggle rounded-start-5" type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false"
-                        style="background-color: #fff; color: #000; border-radius: 0; border: none; outline: none; box-shadow: none;">
-                        Options
-                      </button>
-                      <ul class="dropdown-menu rounded-0">
-                        <li><a class="dropdown-item" href="#">Option 1</a></li>
-                        <li><a class="dropdown-item" href="#">Option 2</a></li>
-                        <li><a class="dropdown-item" href="#">Option 3</a></li>
-                      </ul>
-                      <input class="form-control me-0" type="search" placeholder="Search" aria-label="Search"
-                        style="border-radius: 0; border: none;">
-                      <button class="btn btn-lg ps-5 pe-5 pt-3 pb-3 rounded-end-5" type="submit"
-                        style="border-radius: 0; color: #ffff; background: linear-gradient(90deg, #ef3e0f, #ffb800); border: none;">
-                        <i class="fas fa-search"></i>
-                      </button>
+                  <form action="" method="post">
+                    <!-- === Medium and Larger Screens (md and up) === -->
+                    <div class="d-md-block d-none">
+                       <div class="input-group">
+                          <!-- === Categories Dropdown === -->
+                          <button class="btn dropdown-toggle bg-white rounded-start-pill border-0 fs-6 text-dark p-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             All Categories
+                          </button>
+                          <ul class="dropdown-menu">
+                             <li><a class="dropdown-item" href="#">All Categories</a></li>
+                             <li><a class="dropdown-item" href="#">IT & Software</a></li>
+                             <li><a class="dropdown-item" href="#">Development</a></li>
+                             <li><a class="dropdown-item" href="#">Marketing & SEO</a></li>
+                          </ul>
+                          <input type="text" class="form-control box-shadow-none border-0 fs-6 text-muted" placeholder="Enter a Subject">
+                          <!-- === Submit Button with Icon and Design === -->
+                          <button class="btn btn-lg ps-5 pe-5 pt-3 pb-3 rounded-end-5" type="submit" style="border-radius: 0; color: #fff; background: linear-gradient(90deg, #ef3e0f, #ffb800); border: none;">
+                             <i class="fas fa-search"></i>
+                          </button>
+                       </div>
                     </div>
-                  </form>
+                 
+                    <!-- === Small Screens (sm and below) === -->
+                    <div class="d-block d-md-none">
+                       <!-- === Categories Dropdown === -->
+                       <button class="btn dropdown-toggle bg-white rounded-pill border-0 fs-6 text-dark p-sm-3 p-2 w-100 d-flex justify-content-between align-items-center mb-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          All Categories
+                       </button>
+                       <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">All Categories</a></li>
+                          <li><a class="dropdown-item" href="#">IT & Software</a></li>
+                          <li><a class="dropdown-item" href="#">Development</a></li>
+                          <li><a class="dropdown-item" href="#">Marketing & SEO</a></li>
+                       </ul>
+                    </div>
+                    <div class="d-block d-md-none">
+                       <input type="text" class="form-control box-shadow-none border-0 fs-6 text-muted p-sm-3 p-2 rounded-pill mb-3" placeholder="Enter a Subject"> 
+                    </div>
+                    <div class="d-block d-md-none">
+                       <button class="btn btn-lg ps-5 pe-5 pt-3 pb-3 rounded-5 w-100" type="submit" style="border-radius: 0; color: #fff; background: linear-gradient(90deg, #ef3e0f, #ffb800); border: none;">
+                          <i class="fas fa-search"></i>
+                       </button>
+                    </div>
+                 </form>
                 </div>
               </div>
             </div>
@@ -261,36 +366,32 @@
       </div>
     </div>
   </div>
-
-
-
-
-
+<!-- Explore variety section -->
   <div class="container-fluid text-white p-5" style="    background-color: #0c2e60;">
     <div class="container">
       <div class="row">
-        <div class="col-4">
-          <div class="row d-flex ">
-            <div class="col-2"><i class="fa-brands fa-app-store-ios fs-1"></i></div>
-            <div class="col-10">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="row d-flex text-center text-lg-start text-md-start">
+            <div class="col-lg-2 col-md-2 col-12 "><i class="fa-brands fa-app-store-ios fs-1 "></i></div>
+            <div class="col-lg-10 col-md-10 col-12">
               <h4>500,000 online courses</h4>
               <p>Explore a variety of fresh topics</p>
             </div>
           </div>
         </div>
-        <div class="col-4">
-          <div class="row">
-            <div class="col-2"><i class="fa-brands fa-app-store-ios fs-1"></i></div>
-            <div class="col-10">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="row d-flex text-center text-lg-start text-md-start">
+            <div class="col-lg-2 col-md-2 col-12"><i class="fa-brands fa-app-store-ios fs-1"></i></div>
+            <div class="col-lg-10 col-md-10 col-12">
               <h4>500,000 online courses</h4>
               <p>Explore a variety of fresh topics</p>
             </div>
           </div>
         </div>
-        <div class="col-4">
-          <div class="row">
-            <div class="col-2"><i class="fa-brands fa-app-store-ios fs-1"></i></div>
-            <div class="col-10">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="row d-flex text-center text-lg-start text-md-start">
+            <div class="col-lg-2 col-md-2 col-12"><i class="fa-brands fa-app-store-ios fs-1"></i></div>
+            <div class="col-12 col-lg-10 col-md-10 ">
               <h4>500,000 online courses</h4>
               <p>Explore a variety of fresh topics</p>
             </div>
@@ -299,90 +400,83 @@
       </div>
     </div>
   </div>
-
-
-
+<!--Top Category  -->
   <div class="container-fluid bg-light p-5 ">
     <div class="container mt-5 mb-5">
       <p class="text-danger text-center">Top Categories</p>
       <h1 class="text-center" style="color: #0c2e60;">Pick the right category Build your career</h1>
-      <div class="row mt-5  d-flex g-5">
-        <div class="col-3">
-          <div class="row p-3 rounded-1 shadow " style="background-color: #fff;">
-            <div class="col-2"><img src="assets\images\pc.png" alt=""></div>
-            <div class="col-10">
-              <h5>IT & Software</h5>
+      <div class="row mt-5  d-flex g-5 ">
+        <div class="col-12 col-lg-3 col-md-4">
+          <div class="row p-3 rounded-1 shadow text-md-center align-items-center" style="background-color: #fff;">
+            <div class="col-2 col-lg-2 col-md-12"><img src="assets\images\pc.png" alt=""></div>
+            <div class="col-10 col-lg-10 col-md-12">
+              <h6>IT & Software</h6>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="row p-3 rounded-1 shadow" style="background-color: #fff;">
-            <div class="col-2"><img src="assets\images\data-science.png" alt=""></div>
-            <div class="col-10">
-              <h5>Data Science</h5>
+        <div class="col-12 col-lg-3 col-md-4">
+          <div class="row p-3 rounded-1 shadow text-md-center align-items-center" style="background-color: #fff;">
+            <div class="col-2 col-lg-2 col-md-12"><img src="assets\images\data-science.png" alt=""></div>
+            <div class="col-10 col-lg-10 col-md-12">
+              <h6>Data Science</h6>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="row p-3 rounded-1 shadow" style="background-color: #fff;">
-            <div class="col-2"><img src="assets\images\development.png" alt=""></div>
-            <div class="col-10">
-              <h5>Development</h5>
+        <div class="col-12 col-lg-3 col-md-4">
+          <div class="row p-3 rounded-1 shadow text-md-center align-items-center" style="background-color: #fff;">
+            <div class="col-2 col-lg-2 col-md-12"><img src="assets\images\development.png" alt=""></div>
+            <div class="col-10 col-lg-10 col-md-12">
+              <h6>Development</h6>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="row p-3 rounded-1 shadow" style="background-color: #fff;">
-            <div class="col-2"><img src="assets\images\design.png" alt=""></div>
-            <div class="col-10">
-              <h5>Graphics design</h5>
+        <div class="col-12 col-lg-3 col-md-4">
+          <div class="row p-3 rounded-1 shadow text-md-center align-items-center" style="background-color: #fff;">
+            <div class="col-2 col-lg-2 col-md-12"><img src="assets\images\design.png" alt=""></div>
+            <div class="col-10 col-lg-10 col-md-12">
+              <h6>Graphics design</h6>
+            </div>
+          </div>
+        </div>      
+        <div class="col-12 col-lg-3 col-md-4">
+          <div class="row  p-3 rounded-1 shadow text-md-center align-items-center" style="background-color: #fff;">
+            <div class="col-2 col-lg-2 col-md-12"><img src="assets\images\marketing.png" alt=""></div>
+            <div class="col-10 col-lg-10 col-md-12">
+              <h6>Marketing</h6>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="row mt-2 mb-5 d-flex g-5">
-        <div class="col-3">
-          <div class="row  p-3 rounded-1 shadow" style="background-color: #fff;">
-            <div class="col-2"><img src="assets\images\marketing.png" alt=""></div>
-            <div class="col-10">
-              <h5>Marketing</h5>
+        <div class="col-12 col-lg-3 col-md-4">
+          <div class="row p-3 rounded-1 shadow text-md-center align-items-center" style="background-color: #fff;">
+            <div class="col-2 col-lg-2 col-md-12"><img src="assets\images\music.png" alt=""></div>
+            <div class="col-10 col-lg-10 col-md-12">
+              <h6>Music</h6>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="row p-3 rounded-1 shadow" style="background-color: #fff;">
-            <div class="col-2"><img src="assets\images\music.png" alt=""></div>
-            <div class="col-10">
-              <h5>Music</h5>
+        <div class="col-12 col-lg-3 col-md-4">
+          <div class="row p-3 rounded-1 shadow text-md-center align-items-center" style="background-color: #fff;">
+            <div class="col-2 col-lg-2 col-md-12"><img src="assets\images\photography.png" alt=""></div>
+            <div class="col-10 col-lg-10 col-md-12">
+              <h6>Photography</h6>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="row p-3 rounded-1 shadow" style="background-color: #fff;">
-            <div class="col-2"><img src="assets\images\photography.png" alt=""></div>
-            <div class="col-10">
-              <h5>Photography</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="row p-3 rounded-1 shadow" style="background-color: #fff;">
-            <div class="col-2"><img src="assets\images\self-development.png" alt=""></div>
-            <div class="col-10">
-              <h5>Self Development</h5>
+        <div class="col-12 col-lg-3 col-md-4">
+          <div class="row p-3 rounded-1 shadow text-md-center align-items-center" style="background-color: #fff;">
+            <div class="col-2 col-lg-2 col-md-12"><img src="assets\images\self-development.png" alt=""></div>
+            <div class="col-10 col-lg-10 col-md-12">
+              <h6>Self Development</h6>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
-
+<!-- Discount section -->
   <div class="container p-5">
     <div class="row mt-5 mb-5 d-flex justify-content-center align-items-center">
-      <div class="col-6">
+      <div class="col-12 col-lg-6 col-md-6 mb-4">
         <h2>50% DISCOUT <br> VOUCHER <sub class="fs-6 fw-semibold">ON YOUR NEXT ENROLL</sub></h2>
         <p>Use Coupon code <span class="text-dark-blue fw-semibold ms-2">ELEARNHUB</span></p>
         <div id="timer" class="timer-box row ">
@@ -404,7 +498,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 mb-4  ">
+      <div class="col-12 col-lg-6 col-md-6 mb-4  ">
         <div class="card bg-light shadow-sm rounded border-0">
           <div class="card-header p-4 bg-warning border-0 rounded-5 rounded-top-0 mb-4">
             <h2 class="text-white text-center fw-bold">15 Day Free Trial</h2>
@@ -449,17 +543,14 @@
       </div>
     </div>
   </div>
-
-
-
-  <!-- popular courses -->
+<!-- popular courses -->
   <div class="container">
     <h1 style="color: #0c2e60;" class="text-center mb-5">Popupar Courses</h1>
     <div id="courseCarousel1" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
               <div class="card">
                 <img src="assets/images/course_1.jpg" class="card-img-top" alt="Course 1">
                 <div class="card-img-overlay">
@@ -488,7 +579,7 @@
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4 d-lg-block d-md-block d-none ">
               <div class="card">
                 <img src="assets/images/course_1.jpg" class="card-img-top" alt="Course 1">
                 <div class="card-img-overlay">
@@ -517,7 +608,7 @@
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class=" d-lg-block d-none col-lg-4 ">
               <div class="card">
                 <img src="assets/images/course_2.jpg" class="card-img-top" alt="Course 1">
                 <div class="card-img-overlay">
@@ -551,7 +642,7 @@
 
         <div class="carousel-item">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-6">
               <div class="card">
                 <img src="assets/images/course_2.jpg" class="card-img-top" alt="Course 2">
                 <div class="card-img-overlay">
@@ -580,7 +671,7 @@
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-6 d-lg-block d-md-block d-none">
               <div class="card">
                 <img src="assets/images/course_2.jpg" class="card-img-top" alt="Course 2">
                 <div class="card-img-overlay">
@@ -609,7 +700,7 @@
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="d-lg-block d-none col-lg-4">
               <div class="card">
                 <img src="assets/images/course_2.jpg" class="card-img-top" alt="Course 2">
                 <div class="card-img-overlay">
@@ -653,42 +744,35 @@
     </div>
 
   </div>
-
-
+<!-- Count section -->
   <div class="container-fluid bg-light mt-5 p-5">
     <div class="container">
       <div class="row p-3 d-flex justify-content-center align-items-center">
-        <div class="col-6 col-md-3 text-center">
+        <div class="col-12 col-md-6 col-lg-3 text-center">
           <h1 style="color: #0c2e60">230</h1>
           <p>AMAZING COURSES</p>
         </div>
-        <div class="col-6 col-md-3 text-center">
+        <div class="col-12 col-md-6 col-lg-3 text-center">
           <h1 style="color: #0c2e60">40</h1>
           <p>TALENTED INSTRUCTORS</p>
         </div>
-        <div class="col-6 col-md-3 text-center">
+        <div class="col-12 col-md-6 col-lg-3 text-center">
           <h1 style="color: #0c2e60">3540</h1>
           <p>SKILLED STUDENTS</p>
         </div>
-        <div class="col-6 col-md-3 text-center">
+        <div class="col-12 col-md-6 col-lg-3 text-center">
           <h1 style="color: #0c2e60">25</h1>
           <p>CATEGORIES</p>
         </div>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
+<!-- Whats new section -->
   <div class="container mt-5">
     <p class="text-danger text-center text-uppercase">WHAT’S NEW</p>
     <h1 class="text-center" style="color: #0c2e60;">Every Single Update From <br>Our Blog Page</h1>
     <div class="row mt-5">
-      <div class="col-4">
+      <div class="col-12 col-lg-4 col-md-6">
         <div class="card border-0">
           <img src="assets/images/2d2a95dab.jpg" class="card-img-top" alt="...">
           <div class="card-body text-dark rounded shadow ms-4"
@@ -713,7 +797,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-12 col-lg-4 col-md-6">
         <div class="card border-0">
           <img src="assets\images\37891d519.jpg" class="card-img-top" alt="...">
           <div class="card-body text-dark rounded shadow ms-4"
@@ -738,7 +822,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-12 col-lg-4 col-md-6">
         <div class="card border-0">
           <img src="assets\images\11b88ef39.jpg" class="card-img-top" alt="...">
           <div class="card-body text-dark rounded shadow ms-4"
@@ -765,17 +849,14 @@
       </div>
     </div>
   </div>
-
-
-
-
+  <!-- User section -->
   <div class="card text-bg-dark mt-5">
     <img src="assets/images/banar-1-205.jpg" class="card-img " style="object-fit: cover; height: 100vh;">
     <div class="card-img-overlay   d-flex flex-column justify-content-center bg-opacity-50 h-100"
       style="background: linear-gradient(to right bottom, rgba(12,46,96,.8), rgba(239,71,13,.5)); ">
-      <p class=" card-text text-center mt-5">TESTIMONIALS</p>
+      <h6 class=" card-text text-center mt-5">TESTIMONIALS</h6>
       <h1 class="card-title text-center">What Our Users Say About Us</h1>
-      <div class="container mt-5 mb-5">
+      <div class="container mt-2 mb-5">
         <div id="courseCarousel2" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -823,8 +904,7 @@
       </div>
     </div>
   </div>
-
-
+<!-- Subscription section -->
   <div class="container-fluid p-5" style="background-color: #0c2e60;">
     <div class="container">
       <div class="row d-flex justify-content-center align-items-center text-center text-white">
@@ -850,24 +930,20 @@
       </div>
     </div>
   </div>
-
-
-
-
-
+<!-- Footer section -->
   <div class="container-fluid bg-light p-5 mt-5" style="width: 100%; height: 100%;">
     <div class="container mt-5">
-      <div class="row justify-content-center"> <!-- Added justify-content-center -->
-        <div class="col-3">
-          <h5 class="text-uppercase fw-bold" style="color: #0c2e60;">Learning Resources</h5>
-          <ul class="list-unstyled">
+      <div class="row  ">
+        <div class="col-6 col-lg-3 col-md-6  ">
+          <h5 class="text-uppercase fw-bold" style="color: #0c2e60;" >Learning Resources</h5>
+          <ul class="list-unstyled ">
             <li><a href="#" class="text-dark text-decoration-none small">Course Catalog</a></li>
             <li><a href="#" class="text-dark text-decoration-none small">Tutorials</a></li>
             <li><a href="#" class="text-dark text-decoration-none small">Webinars</a></li>
             <li><a href="#" class="text-dark text-decoration-none small">Blogs</a></li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col-6 col-lg-3 col-md-6">
           <h5 class="text-uppercase fw-bold" style="color: #0c2e60;">Get Support</h5>
           <ul class="list-unstyled">
             <li><a href="#" class="text-dark text-decoration-none small">Contact Us</a></li>
@@ -876,7 +952,7 @@
             <li><a href="#" class="text-dark text-decoration-none small">Feedback</a></li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col-6 col-lg-3 col-md-6">
           <h5 class="text-uppercase fw-bold" style="color: #0c2e60;">Community</h5>
           <ul class="list-unstyled">
             <li><a href="#" class="text-dark text-decoration-none small">Forums</a></li>
@@ -885,7 +961,7 @@
             <li><a href="#" class="text-dark text-decoration-none small">Success Stories</a></li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col-6 col-lg-3 col-md-6">
           <h5 class="text-uppercase fw-bold" style="color: #0c2e60;">Stay Connected</h5>
           <ul class="list-unstyled">
             <li><a href="#" class="text-dark text-decoration-none small">Newsletter Signup</a></li>
@@ -897,9 +973,7 @@
       </div>
     </div>
   </div>
-
-
-  <!-- Footer Copyright Section -->
+<!-- Footer Copyright Section -->
   <footer class="text-center mt-3 " style="background-color: #FFFFFF; color: #4b4b4b;">
     <h5 class="small">Learning BD © 2024 Designed by MS Bithi. All Rights Reserved</h6>
   </footer>
