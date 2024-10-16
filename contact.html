@@ -10,70 +10,133 @@
   </head>
   <body >
 
-    <!-- Navbar with modal trigger -->
-    <nav class="navbar sticky-top navbar-expand-lg bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="assets\images\logo.png" width="135px" height="40px"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<!-- Navbar with modal trigger and offcanvas for mobile/tablet screens -->
+<nav class="navbar sticky-top navbar-expand-lg bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo.png" width="135px" height="40px" alt="Logo">
+    </a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Home
-                </a>
-                <ul class="dropdown-menu rounded-0">
-                  <li><a class="dropdown-item" href="#">Home 1</a></li>
-                  <li><a class="dropdown-item" href="#">Home 2</a></li>
-                  <li><a class="dropdown-item" href="#">Home 3</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Courses
-                </a>
-                <ul class="dropdown-menu rounded-0">
-                  <li><a class="dropdown-item" href="#">Courses</a></li>
-                  <li><a class="dropdown-item" href="#">Courses Details</a></li>
-                </ul>
-              </li>
+    <!-- Offcanvas Toggler for mobile/tablet screens -->
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Blog
-                </a>
-                <ul class="dropdown-menu rounded-0">
-                  <li><a class="dropdown-item" href="#">Blogs</a></li>
-                  <li><a class="dropdown-item" href="#">Blog Details</a></li>               
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Page
-                </a>
-                <ul class="dropdown-menu rounded-0">
-                  <li><a class="dropdown-item" href="#">Pages </a></li>
-                  <li><a class="dropdown-item" href="#">Page Details</a></li>
-                </ul>
-              </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-          
-          <!-- Login Modal Trigger Button -->
-          <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-color: #ffb800;">Login</button>
-        </div>
+    <!-- Offcanvas menu for mobile/tablet screens -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-    </nav>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <!-- Menu Items -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home
+            </a>
+            <ul class="dropdown-menu rounded-0">
+              <li><a class="dropdown-item" href="#">Home 1</a></li>
+              <li><a class="dropdown-item" href="#">Home 2</a></li>
+              <li><a class="dropdown-item" href="#">Home 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Courses
+            </a>
+            <ul class="dropdown-menu rounded-0">
+              <li><a class="dropdown-item" href="Course.html">Courses</a></li>
+              <li><a class="dropdown-item" href="CoursesDetails.html">Courses Details</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Blog
+            </a>
+            <ul class="dropdown-menu rounded-0">
+              <li><a class="dropdown-item" href="Blogs.html">Blogs</a></li>
+              <li><a class="dropdown-item" href="Blog_Details.html">Blog Details</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Page
+            </a>
+            <ul class="dropdown-menu rounded-0">
+              <li><a class="dropdown-item" href="Page.html">Pages</a></li>
+              <li><a class="dropdown-item" href="PageDetails.html">Page Details</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
 
+        <!-- Login Modal Trigger Button -->
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-color: #ffb800;">Login</button>
+      </div>
+    </div>
+
+    <!-- Normal Navbar for large screens -->
+    <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Menu Items -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </a>
+          <ul class="dropdown-menu rounded-0">
+            <li><a class="dropdown-item" href="#">Home 1</a></li>
+            <li><a class="dropdown-item" href="#">Home 2</a></li>
+            <li><a class="dropdown-item" href="#">Home 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Courses
+          </a>
+          <ul class="dropdown-menu rounded-0">
+            <li><a class="dropdown-item" href="Course.html">Courses</a></li>
+            <li><a class="dropdown-item" href="CoursesDetails.html">Courses Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Blog
+          </a>
+          <ul class="dropdown-menu rounded-0">
+            <li><a class="dropdown-item" href="Blogs.html">Blogs</a></li>
+            <li><a class="dropdown-item" href="Blog_Details.html">Blog Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Page
+          </a>
+          <ul class="dropdown-menu rounded-0">
+            <li><a class="dropdown-item" href="Page.html">Pages</a></li>
+            <li><a class="dropdown-item" href="PageDetails.html">Page Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Login Modal Trigger Button -->
+      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        style="border-color: #ffb800;">Login</button>
+    </div>
+  </div>
+</nav>
     <!-- Login Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -83,7 +146,8 @@
               <!-- Email Field -->
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="col-form-label" required><strong>Email</strong></label>
-                <input type="email" class="form-control rounded-0" id="exampleFormControlInput1" value="learning@gmail.com" required>
+                <input type="email" class="form-control rounded-0" id="exampleFormControlInput1"
+                  value="learning@gmail.com" required>
                 <div id="validationServerEmailFeedback" class="invalid-feedback">
                   Please include an '@' in the email address.
                 </div>
@@ -91,7 +155,8 @@
               <!-- Password Field -->
               <div class="mb-3">
                 <label for="inputPassword5" class="col-form-label" required><strong>Password</strong></label>
-                <input type="password" id="inputPassword5" class="form-control rounded-0" aria-describedby="passwordHelpBlock" required>
+                <input type="password" id="inputPassword5" class="form-control rounded-0"
+                  aria-describedby="passwordHelpBlock" required>
                 <div class="invalid-feedback">Please enter a valid password.</div>
               </div>
               <!-- Remember Password Checkbox -->
@@ -102,15 +167,16 @@
                     Remember Password
                   </label>
                 </div>
-               
+  
               </div>
               <!-- Submit Button -->
               <div class="mb-3">
-                <button type="submit" class="btn btn-md ps-3 pe-3 rounded-5" style="background: linear-gradient(90deg, #ef3e0f, #ffb800);">Login</button>
+                <button type="submit" class="btn btn-md ps-3 pe-3 rounded-5"
+                  style="background: linear-gradient(90deg, #ef3e0f, #ffb800);">Login</button>
               </div>
               <!-- Signup Link -->
               <div class="mb-3 ">
-                <h6 >Don’t have an account? <a href="#" class="text-decoration-none text-danger">Signup Now</a></h6>
+                <h6>Don’t have an account? <a href="#" class="text-decoration-none text-danger">Signup Now</a></h6>
               </div>
             </form>
           </div>

@@ -17,79 +17,28 @@
 
 <body>
 
-   <!-- Navbar with modal trigger and offcanvas for mobile/tablet screens -->
-  <nav class="navbar sticky-top navbar-expand-lg bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" width="135px" height="40px"></a>
+<!-- Navbar with modal trigger and offcanvas for mobile/tablet screens -->
+<nav class="navbar sticky-top navbar-expand-lg bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo.png" width="135px" height="40px" alt="Logo">
+    </a>
 
-      <!-- Offcanvas Toggler for mobile/tablet screens -->
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Offcanvas Toggler for mobile/tablet screens -->
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Offcanvas menu for mobile/tablet screens -->
-      <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <!-- Same menu items from the original navbar -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Home
-              </a>
-              <ul class="dropdown-menu rounded-0">
-                <li><a class="dropdown-item" href="#">Home 1</a></li>
-                <li><a class="dropdown-item" href="#">Home 2</a></li>
-                <li><a class="dropdown-item" href="#">Home 3</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Courses
-              </a>
-              <ul class="dropdown-menu rounded-0">
-                <li><a class="dropdown-item" href="#">Courses</a></li>
-                <li><a class="dropdown-item" href="#">Courses Details</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Blog
-              </a>
-              <ul class="dropdown-menu rounded-0">
-                <li><a class="dropdown-item" href="#">Blogs</a></li>
-                <li><a class="dropdown-item" href="#">Blog Details</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Page
-              </a>
-              <ul class="dropdown-menu rounded-0">
-                <li><a class="dropdown-item" href="#">Pages</a></li>
-                <li><a class="dropdown-item" href="#">Page Details</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-
-          <!-- Login Modal Trigger Button -->
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-color: #ffb800;">Login</button>
-        </div>
+    <!-- Offcanvas menu for mobile/tablet screens -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-
-      <!-- Normal Navbar for large screens -->
-      <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <!-- Menu Items -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Home
@@ -101,15 +50,15 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Courses
             </a>
             <ul class="dropdown-menu rounded-0">
-              <li><a class="dropdown-item" href="#">Courses</a></li>
-              <li><a class="dropdown-item" href="#">Courses Details</a></li>
+              <li><a class="dropdown-item" href="Course.html">Courses</a></li>
+              <li><a class="dropdown-item" href="CoursesDetails.html">Courses Details</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -117,8 +66,8 @@
               Blog
             </a>
             <ul class="dropdown-menu rounded-0">
-              <li><a class="dropdown-item" href="#">Blogs</a></li>
-              <li><a class="dropdown-item" href="#">Blog Details</a></li>
+              <li><a class="dropdown-item" href="Blogs.html">Blogs</a></li>
+              <li><a class="dropdown-item" href="Blog_Details.html">Blog Details</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -126,8 +75,8 @@
               Page
             </a>
             <ul class="dropdown-menu rounded-0">
-              <li><a class="dropdown-item" href="#">Pages</a></li>
-              <li><a class="dropdown-item" href="#">Page Details</a></li>
+              <li><a class="dropdown-item" href="Page.html">Pages</a></li>
+              <li><a class="dropdown-item" href="PageDetails.html">Page Details</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -136,12 +85,65 @@
         </ul>
 
         <!-- Login Modal Trigger Button -->
-        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal"
-          style="border-color: #ffb800;">Login</button>
-      </div>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-color: #ffb800;">Login</button>
       </div>
     </div>
-  </nav>
+
+    <!-- Normal Navbar for large screens -->
+    <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Menu Items -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </a>
+          <ul class="dropdown-menu rounded-0">
+            <li><a class="dropdown-item" href="#">Home 1</a></li>
+            <li><a class="dropdown-item" href="#">Home 2</a></li>
+            <li><a class="dropdown-item" href="#">Home 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Courses
+          </a>
+          <ul class="dropdown-menu rounded-0">
+            <li><a class="dropdown-item" href="Course.html">Courses</a></li>
+            <li><a class="dropdown-item" href="CoursesDetails.html">Courses Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Blog
+          </a>
+          <ul class="dropdown-menu rounded-0">
+            <li><a class="dropdown-item" href="Blogs.html">Blogs</a></li>
+            <li><a class="dropdown-item" href="Blog_Details.html">Blog Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Page
+          </a>
+          <ul class="dropdown-menu rounded-0">
+            <li><a class="dropdown-item" href="Page.html">Pages</a></li>
+            <li><a class="dropdown-item" href="PageDetails.html">Page Details</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Login Modal Trigger Button -->
+      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        style="border-color: #ffb800;">Login</button>
+    </div>
+  </div>
+</nav>
   <!-- Login Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
