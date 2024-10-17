@@ -23,3 +23,13 @@
 .text-hover:hover {
 color: red !important;
 }
+
+.tebu .active{
+    background: linear-gradient(90deg,#0c2e60,#620c7c);
+ 
+
+}
+
+.tebu{
+    color :#000000;
+}
